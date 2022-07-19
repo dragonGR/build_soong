@@ -71,7 +71,7 @@ func deviceClean(ctx Context, config Config, what int) {
 		productOut("*.cpio"),
 		productOut("*.img"),
 		productOut("*.zip"),
-		productOut("*.zip.md5sum"),
+		productOut("*.zip.sha256sum"),
 		productOut("android-info.txt"),
 		productOut("Changelog.txt"),
 		productOut("kernel"),
@@ -81,7 +81,8 @@ func deviceClean(ctx Context, config Config, what int) {
 		productOut("symbols"),
 		productOut("system"),
 		productOut("system_other"),
-		productOut("vendor"))
+		productOut("vendor"),
+		productOut("obj/KERNEL_OBJ"))
 
 	ctx.Println("Device specific stuff removed.")
 }
